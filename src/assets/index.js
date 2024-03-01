@@ -8,6 +8,7 @@ import inventory from "./inventory.jpg";
 import storeLogo from "./store-logo.png";
 import activity from "./activity.jpg";
 import wordart from "./wordart.png";
+import logo from "./logo.png";
 
 export {
   profilePic,
@@ -20,4 +21,5 @@ export {
   storeLogo,
   activity,
   wordart,
+  logo,
 };
