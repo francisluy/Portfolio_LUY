@@ -1,6 +1,3 @@
-import React from "react";
-import { profilePic, avatar } from "../assets";
-
 export default function Skills() {
   return (
     <div

@@ -1,7 +1,32 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { db } from "../config/firebase";
+import { collection, getDocs } from "firebase/firestore";
 import { LuPhone, LuMail, LuDownloadCloud } from "react-icons/lu";
 
 export default function Contact() {
+  const [contactData, setContactData] = useState({
+    resume: "",
+    email: "name@email.com",
+    phone: "+63 XXX-XXXXXXX",
+  });
+
+  useEffect(() => {
+    const getData = async () => {
+      const contact = collection(db, "contact");
+      try {
+        const data = await getDocs(contact);
+        const dataObject = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setContactData(dataObject[0]);
+      } catch (error) {
+        alert(error);
+      }
+    };
+    getData();
+  }, []);
+
   return (
     <div
       id="contact"
@@ -21,14 +46,14 @@ export default function Contact() {
 
           <div className="flex w-full max-w-[39ch] flex-col items-center gap-4 py-8 lg:py-0 ">
             <span className="flex items-center gap-4">
-              <LuMail /> clydeluy12@gmail.com
+              <LuMail /> {contactData?.email}
             </span>
             <span className="flex items-center gap-4">
-              <LuPhone /> +63 960-8886673
+              <LuPhone /> {contactData?.phone}
             </span>
             <a
               className="image-shadow mt-4 flex items-center gap-2 rounded-md bg-[#1B8057] px-4 py-2 text-[#EDE9A3]"
-              href="https://storage.googleapis.com/portfolio-luy.appspot.com/files/LUY_CV.pdf"
+              href={contactData?.resume}
               target="_blank"
               rel="noreferrer"
             >
