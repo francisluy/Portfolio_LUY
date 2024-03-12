@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
-import { db } from "../config/firebase";
+import { useEffect, useState } from "react";
+import { LuDownloadCloud } from "react-icons/lu";
 import { collection, getDocs } from "firebase/firestore";
-import { LuPhone, LuMail, LuDownloadCloud } from "react-icons/lu";
+import { db } from "../config/firebase";
+import { facebook, gmail, instagram, phone } from "../assets";
 
 export default function Contact() {
   const [contactData, setContactData] = useState({
     resume: "",
     email: "name@email.com",
     phone: "+63 XXX-XXXXXXX",
+    fbtag: "fb/",
+    intag: "@",
   });
 
   useEffect(() => {
@@ -37,22 +40,46 @@ export default function Contact() {
           My Contact Information
         </h2>
         <div className="flex w-full max-w-[850px] flex-col items-center justify-center gap-4 lg:flex-row lg:justify-between">
-          <div className="w-full max-w-[39ch]  text-center lg:text-left">
+          <div className="w-full max-w-[39ch] text-center lg:h-full lg:pt-10 lg:text-left">
             <p className=" text-pretty">
               Feel free to reach out to me via email or phone call. I look
               forward to hearing from you!
             </p>
           </div>
 
-          <div className="flex w-full max-w-[39ch] flex-col items-center gap-4 py-8 lg:py-0 ">
-            <span className="flex items-center gap-4">
-              <LuMail /> {contactData?.email}
-            </span>
-            <span className="flex items-center gap-4">
-              <LuPhone /> {contactData?.phone}
-            </span>
+          <div className="flex w-full max-w-[39ch] flex-col items-center gap-4 py-8 lg:py-0">
+            <div className="space-y-2">
+              <span className="flex items-center gap-4">
+                <img src={gmail} alt="gmail" className=" size-4" />
+                {contactData?.email}
+              </span>
+              <span className="flex items-center gap-4">
+                <img src={phone} alt="phone" className=" size-4" />{" "}
+                {contactData?.phone}
+              </span>
+              <span className="flex items-center gap-4">
+                <img src={facebook} alt="facebook" className=" size-4" />{" "}
+                <a
+                  href={contactData?.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {contactData?.fbtag}
+                </a>
+              </span>
+              <span className="flex items-center gap-4">
+                <img src={instagram} alt="instagram" className=" size-4" />{" "}
+                <a
+                  href={contactData?.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {contactData?.intag}
+                </a>
+              </span>
+            </div>
             <a
-              className="image-shadow mt-4 flex items-center gap-2 rounded-md bg-[#1B8057] px-4 py-2 text-[#EDE9A3]"
+              className="image-shadow mt-4 flex w-40 items-center gap-2 rounded-md bg-[#1B8057] px-4 py-2 text-[#EDE9A3]"
               href={contactData?.resume}
               target="_blank"
               rel="noreferrer"

@@ -49,12 +49,10 @@ export default function Projects() {
             />
             <div className="w-full space-y-4">
               <div>
-                <p className="font-semibold">{project.title}</p>
+                <p className="text-lg font-semibold">{project.title}</p>
                 <p className="text-sm">{project.date}</p>
               </div>
-              <p className="max-w-prose text-pretty indent-8">
-                {project.description}
-              </p>
+              <p className="max-w-prose text-pretty">{project.description}</p>
             </div>
           </div>
         ))}
