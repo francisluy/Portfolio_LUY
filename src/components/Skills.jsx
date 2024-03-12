@@ -36,11 +36,11 @@ export default function Skills() {
       <div className="flex w-full max-w-[1280px] flex-col items-center pb-8">
         <h2 className="py-8 text-2xl font-bold">My Skills</h2>
 
-        <div className="grid w-full  justify-items-center gap-6 py-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid w-full justify-items-center gap-6 py-4 md:grid-cols-2 lg:grid-cols-4">
           {skillsData.map((skill) => (
             <div
               key={skill?.id}
-              className="image-shadow flex min-h-[150px] w-full grow flex-col items-center justify-center rounded-xl bg-white py-10"
+              className="image-shadow flex min-h-[150px] w-full flex-col items-center justify-center rounded-xl bg-white py-10"
             >
               <p className="font-semibold">{skill.title}</p>
               <ul className=" list-inside list-disc">
