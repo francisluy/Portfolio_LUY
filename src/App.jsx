@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="flex w-screen flex-col items-center">
+    <div className="flex  flex-col items-center">
       <Header />
       <Hero />
       <div className=" flex w-full flex-col items-center bg-white">

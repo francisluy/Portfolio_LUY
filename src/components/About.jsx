@@ -37,9 +37,7 @@ export default function About() {
               alt="profile picture"
               className="size-[200px] rounded-full"
             />
-            <p className="max-w-prose text-pretty indent-8">
-              {aboutData?.content}
-            </p>
+            <p className="max-w-prose text-pretty">{aboutData?.content}</p>
           </div>
         </div>
       )}
