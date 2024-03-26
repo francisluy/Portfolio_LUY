@@ -9,10 +9,10 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="flex  flex-col items-center">
-      <Header />
+    <div className="flex flex-col items-center">
       <Hero />
-      <div className=" flex w-full flex-col items-center bg-white">
+      <div className="z-10 flex w-full flex-col items-center bg-white">
+        <Header />
         <About />
         <Skills />
         <Projects />

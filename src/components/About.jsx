@@ -23,21 +23,25 @@ export default function About() {
   }, []);
 
   return (
-    <div id="about" className="flex w-full flex-col items-center p-4">
+    <div id="about" className="flex w-full flex-col items-center">
       {!aboutData ? (
         <div className="flex w-full max-w-[1280px] flex-col items-center p-8 text-2xl font-bold">
           Loading...
         </div>
       ) : (
-        <div className="flex w-full max-w-[1280px] flex-col items-center pb-8">
-          <h2 className="py-8 text-2xl font-bold">About Me</h2>
-          <div className="flex w-full flex-col items-center gap-8 py-4 lg:flex-row lg:justify-evenly">
+        <div className="flex w-full max-w-[1280px] flex-col items-center p-4 lg:flex-row-reverse lg:gap-12">
+          <div className="space-y-4 py-8">
+            <h2 className="text-center text-2xl font-bold lg:text-left">
+              About Me
+            </h2>
+            <p className="max-w-prose text-pretty">{aboutData?.content}</p>
+          </div>
+          <div className="max-w-[65ch]">
             <img
               src={aboutData?.avatar}
               alt="profile picture"
-              className="size-[200px] rounded-full"
+              className="rounded-2xl"
             />
-            <p className="max-w-prose text-pretty">{aboutData?.content}</p>
           </div>
         </div>
       )}

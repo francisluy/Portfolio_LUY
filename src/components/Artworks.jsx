@@ -48,15 +48,19 @@ export default function Artworks() {
         <h2 className="py-12 text-2xl font-bold">My Artworks</h2>
         <div className="flex w-full  items-center gap-8 overflow-x-auto py-4 pb-8">
           {artworksData.map((url, index) => (
-            <img
-              src={url}
-              onClick={() => openImageViewer(index)}
-              width="300"
-              height="300"
+            <div
               key={index}
-              alt=""
-              className="image-shadow size-[200px] cursor-pointer rounded-lg object-cover"
-            />
+              className="flex min-w-[300px] flex-col items-center gap-4"
+            >
+              <img
+                src={url}
+                onClick={() => openImageViewer(index)}
+                width="300"
+                height="300"
+                alt=""
+                className="image-shadow size-[300px] cursor-pointer rounded-xl object-cover"
+              />
+            </div>
           ))}
 
           {isViewerOpen && (

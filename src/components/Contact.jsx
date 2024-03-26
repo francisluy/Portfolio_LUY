@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex w-full  justify-center bg-gradient-to-r from-green-200 to-amber-50 px-4 py-12"
+      className="flex w-full justify-center bg-[url('./assets/halftone.jpg')] bg-cover bg-fixed bg-center px-4 py-12"
     >
       <div className="flex w-full max-w-[850px] flex-col items-center justify-center gap-4">
         <h2 className="w-full py-4 text-center text-2xl font-bold lg:text-left">
