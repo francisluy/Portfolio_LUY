@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { db } from "../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
-// import { halftone } from "../assets";
 
 export default function Skills() {
   const [skillsData, setSkillsData] = useState([
@@ -32,10 +31,10 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="flex w-full flex-col items-center bg-[url('./assets/halftone.jpg')] bg-cover bg-fixed bg-center p-12"
+      className="flex w-full flex-col items-center bg-gradient-to-t from-transparent via-accent to-transparent p-12"
     >
       <div className="flex w-full max-w-[1280px] flex-col items-center pb-8">
-        <h2 className="py-8 text-2xl font-bold">My Skills</h2>
+        <h2 className="py-8 text-3xl font-bold">My Skills</h2>
 
         <div className="grid w-full justify-items-center gap-6 py-4 md:grid-cols-2 lg:grid-cols-4">
           {skillsData.map((skill) => (

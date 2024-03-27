@@ -61,7 +61,7 @@ export default function Hero() {
               </p>
               <div className="flex w-full items-center justify-center lg:justify-start">
                 <a
-                  className="image-shadow mt-4 flex w-40 items-center gap-2 rounded-md bg-primary px-4 py-2 text-center font-normal text-secondary"
+                  className="image-shadow mt-4 flex w-40 items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-center font-normal text-secondary"
                   href="#contact"
                 >
                   <LuPhoneCall />

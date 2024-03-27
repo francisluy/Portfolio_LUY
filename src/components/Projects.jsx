@@ -31,31 +31,36 @@ export default function Projects() {
   }, []);
 
   return (
-    <div id="projects" className="my-8 flex w-full flex-col items-center p-4">
-      <div className="flex w-full max-w-[1280px] flex-col items-center gap-16 pb-8">
-        <h2 className="text-2xl font-bold">My Projects</h2>
-        {projectsData.map((project, index) => (
-          <div
-            key={index}
-            className={cn(
-              "flex w-full flex-col items-center gap-8 py-4 lg:items-start lg:justify-evenly lg:gap-16",
-              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse",
-            )}
-          >
-            <img
-              src={project.image}
-              alt="project picture"
-              className="image-shadow w-full rounded-xl object-cover shadow-2xl lg:w-3/6"
-            />
-            <div className="w-full space-y-4">
-              <div>
-                <p className="text-lg font-semibold">{project.title}</p>
-                <p className="text-sm">{project.date}</p>
+    <div
+      id="projects"
+      className="image-shadow my-8 flex w-full flex-col items-center rounded-bl-[800px] rounded-tr-[800px] bg-green-50 p-4"
+    >
+      <div className="flex w-full max-w-[1280px] flex-col items-center gap-16 py-8">
+        <h2 className="text-3xl font-bold">My Projects</h2>
+        <div className="space-y-8">
+          {projectsData.map((project, index) => (
+            <div
+              key={index}
+              className={cn(
+                "image-shadow flex w-full flex-col items-center gap-8 rounded-2xl bg-white p-6 lg:items-start lg:justify-evenly lg:gap-16",
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse",
+              )}
+            >
+              <img
+                src={project.image}
+                alt="project picture"
+                className="image-shadow w-full rounded-xl object-cover shadow-2xl lg:w-3/6"
+              />
+              <div className="w-full space-y-4">
+                <div>
+                  <p className="text-lg font-semibold">{project.title}</p>
+                  <p className="text-sm">{project.date}</p>
+                </div>
+                <p className="max-w-prose text-pretty">{project.description}</p>
               </div>
-              <p className="max-w-prose text-pretty">{project.description}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

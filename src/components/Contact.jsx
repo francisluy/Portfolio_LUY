@@ -33,10 +33,10 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex w-full justify-center bg-[url('./assets/halftone.jpg')] bg-cover bg-fixed bg-center px-4 py-12"
+      className="flex w-full justify-center bg-[url('./assets/halftone.jpg')] bg-cover bg-center px-4 py-12"
     >
       <div className="flex w-full max-w-[850px] flex-col items-center justify-center gap-4">
-        <h2 className="w-full py-4 text-center text-2xl font-bold lg:text-left">
+        <h2 className="w-full py-4 text-center text-3xl font-bold lg:text-left">
           My Contact Information
         </h2>
         <div className="flex w-full max-w-[850px] flex-col items-center justify-center gap-4 lg:flex-row lg:justify-between">
@@ -79,7 +79,7 @@ export default function Contact() {
               </span>
             </div>
             <a
-              className="image-shadow mt-4 flex w-40 items-center gap-2 rounded-md bg-[#1B8057] px-4 py-2 text-[#EDE9A3]"
+              className="image-shadow mt-4 flex w-40 items-center justify-center gap-2 rounded-md bg-[#1B8057] px-4 py-2 text-[#EDE9A3]"
               href={contactData?.resume}
               target="_blank"
               rel="noreferrer"

@@ -31,7 +31,7 @@ export default function About() {
       ) : (
         <div className="flex w-full max-w-[1280px] flex-col items-center p-4 lg:flex-row-reverse lg:gap-12">
           <div className="space-y-4 py-8">
-            <h2 className="text-center text-2xl font-bold lg:text-left">
+            <h2 className="text-center text-3xl font-bold lg:text-left">
               About Me
             </h2>
             <p className="max-w-prose text-pretty">{aboutData?.content}</p>
