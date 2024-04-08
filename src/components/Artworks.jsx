@@ -45,7 +45,7 @@ export default function Artworks() {
   return (
     <div id="artworks" className="flex w-full flex-col items-center p-4">
       <div className="flex w-full max-w-[1280px] flex-col items-center border-y-[1px] border-[#1B8057] pb-16">
-        <h2 className="py-12 text-3xl font-bold">My Artworks</h2>
+        <h2 className="py-12 text-3xl font-bold">My Artworks & Photos</h2>
         <div className="flex w-full  items-center gap-8 overflow-x-auto py-4 pb-8">
           {artworksData.map((url, index) => (
             <div

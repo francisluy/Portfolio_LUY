@@ -7,9 +7,13 @@ import { imgPlaceholder } from "../assets";
 const defaultProjects = [
   {
     title: "My Project",
+    role: "My Role",
+    date: "Jan 1, 2024",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, numquam.",
     image: imgPlaceholder,
+    id: "0",
+    stack: [],
   },
 ];
 
@@ -54,9 +58,15 @@ export default function Projects() {
               <div className="w-full space-y-4">
                 <div>
                   <p className="text-lg font-semibold">{project.title}</p>
+                  <p>{project.role}</p>
                   <p className="text-sm">{project.date}</p>
                 </div>
                 <p className="max-w-prose text-pretty">{project.description}</p>
+                <div className="flex gap-2">
+                  {project.stack.map((logo) => (
+                    <img key={logo} src={logo} alt="" className="size-[24px]" />
+                  ))}
+                </div>
               </div>
             </div>
           ))}
