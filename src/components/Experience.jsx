@@ -24,7 +24,8 @@ export default function Experience() {
           ...doc.data(),
           id: doc.id,
         }));
-        setExpData(dataObject);
+        const obj = dataObject.sort((a, b) => b.id - a.id);
+        setExpData(obj);
       } catch (error) {
         alert(error);
       }
