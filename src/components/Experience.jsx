@@ -34,7 +34,7 @@ export default function Experience() {
 
   return (
     <div
-      id="experience"
+      id="experiences"
       className="z-[-1] flex w-full flex-col items-center bg-green-950 px-4 py-20"
     >
       <div className="flex w-full max-w-[640px] flex-col items-center pb-8">
