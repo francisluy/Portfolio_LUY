@@ -31,7 +31,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="flex w-full flex-col items-center bg-gradient-to-t from-transparent via-accent to-transparent p-12"
+      className="flex w-full flex-col items-center bg-gradient-to-t from-green-950 via-accent to-transparent px-4 py-20"
     >
       <div className="flex w-full max-w-[1280px] flex-col items-center pb-8">
         <h2 className="py-8 text-3xl font-bold">My Skills</h2>

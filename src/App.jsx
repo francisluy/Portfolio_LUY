@@ -1,6 +1,7 @@
 import About from "./components/About";
 import Artworks from "./components/Artworks";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <About />
         <Skills />
+        <Experience />
         <Projects />
         <Artworks />
         <Contact />
